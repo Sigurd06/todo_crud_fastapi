@@ -23,7 +23,7 @@ class UserService(BaseSevice[User, UserCreate, UserUpdate]):
         return object_db
 
     def authenticate(self, db: Session, *, email: str, password: str) -> Optional[User]:
-        user = self.get_by_email(db, email=email)
+        user = self.find_by_email(db, email=email)
         if not user:
             return None
         if not verify_password(password, user.password):
