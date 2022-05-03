@@ -1,11 +1,11 @@
 
 from typing import Generator
 
-from core import security
-from core.schemas.token import TokenPayload
-from core.schemas.user import User
-from core.settings import settings
-from db.session import SessionLocal
+from app.core import security
+from app.core.schemas.token import TokenPayload
+from app.core.schemas.user import User
+from app.core.settings import settings
+from app.db.session import SessionLocal
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import jwt

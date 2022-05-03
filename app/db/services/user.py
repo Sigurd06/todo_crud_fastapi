@@ -1,9 +1,9 @@
 from typing import Any, Dict, Optional, Union
 
-from core.models.user import User
-from core.schemas.user import UserCreate, UserUpdate
-from core.security import get_password_hash, verify_password
-from db.services.base import BaseSevice
+from app.core.models.user import User
+from app.core.schemas.user import UserCreate, UserUpdate
+from app.core.security import get_password_hash, verify_password
+from app.db.services.base import BaseSevice
 from sqlalchemy.orm import Session
 
 

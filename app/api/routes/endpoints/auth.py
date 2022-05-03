@@ -1,12 +1,12 @@
 from datetime import timedelta
 
-from api.dependencies import get_db
-from core.schemas.msj import Response
-from core.schemas.token import Token
-from core.schemas.user import UserCreate, UserInDBBase, UserLogin
-from core.security import create_access_token
-from core.settings import settings
-from db.services.user import userService
+from app.api.dependencies import get_db
+from app.core.schemas.msj import Response
+from app.core.schemas.token import Token
+from app.core.schemas.user import UserCreate, UserInDBBase, UserLogin
+from app.core.security import create_access_token
+from app.core.settings import settings
+from app.db.services.user import userService
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
