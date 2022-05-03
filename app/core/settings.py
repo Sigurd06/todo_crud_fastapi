@@ -2,10 +2,10 @@ import os
 from typing import Optional
 
 from dotenv import load_dotenv
-from pydantic import BaseSettings, PostgresDsn
+from pydantic import BaseSettings
 
 load_dotenv()
-class Settings(BaseSettings):
+class settings(BaseSettings):
     TITLE: str = 'ToDo CRUD'
     VERSION: str = 'V1.0.0'
     API_PREFIX: str = "/api/v1"
@@ -18,5 +18,4 @@ class Settings(BaseSettings):
     SECRET_KEY: Optional[str] = os.urandom(16).hex()
     SQLALCHEMY_DATABASE_URI: Optional[str] = os.getenv('POSTGRES_URL')
 
-
-settings = Settings()
+settings = settings()
